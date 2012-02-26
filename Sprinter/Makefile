@@ -33,13 +33,13 @@
 # $Id$
 
 TARGET = $(notdir $(CURDIR))
-INSTALL_DIR = ../../arduino22/arduino-0022/
+INSTALL_DIR = ../../arduino-0023/
 UPLOAD_RATE = 38400
 AVRDUDE_PROGRAMMER = stk500v1
 PORT = /dev/ttyUSB0
-MCU = atmega2560
+#MCU = atmega2560
 #For "old" Arduino Mega
-#MCU = atmega1280
+MCU = atmega1280
 #For Sanguinololu
 #MCU = atmega644p 
 F_CPU = 16000000
@@ -199,7 +199,7 @@ extcoff: $(TARGET).elf
 	$(NM) -n $< > $@
 
 # Link: create ELF output file from library.
-applet/$(TARGET).elf: applet/$(TARGET).cpp applet/core.a
+applet/$(TARGET).elf: applet/core.a applet/$(TARGET).cpp
 	$(CC) $(ALL_CFLAGS) -Wl,--gc-sections -o $@ applet/$(TARGET).cpp -L. applet/core.a $(LDFLAGS)
 
 applet/core.a: $(OBJ)
