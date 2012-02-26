@@ -23,8 +23,7 @@
 // 5 is ParCan supplied 104GT-2 100K
 // 6 is EPCOS 100k
 // 7 is 100k Honeywell thermistor 135-104LAG-J01
-// 8 is 100k thermistor supplied with Arcol hotend v4
-#define THERMISTORHEATER 8
+#define THERMISTORHEATER 5
 #define THERMISTORBED 6
 
 //// Calibration variables

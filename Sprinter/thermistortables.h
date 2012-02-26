@@ -370,32 +370,6 @@ const short temptable_7[NUMTEMPS_7][2] = {
 };
 #endif
 
-#if (THERMISTORHEATER == 8) || (THERMISTORBED == 8) // Arcol 100k thermistor
-#define NUMTEMPS_8 20
-short temptable_8[NUMTEMPS_8][2] = {
-   {1, 713},
-   {54, 236},
-   {107, 195},
-   {160, 172},
-   {213, 157},
-   {266, 144},
-   {319, 134},
-   {372, 125},
-   {425, 117},
-   {478, 110},
-   {531, 103},
-   {584, 96},
-   {637, 89},
-   {690, 83},
-   {743, 75},
-   {796, 68},
-   {849, 59},
-   {902, 48},
-   {955, 34},
-   {1008, 3}
-};
-#endif
-
 #if THERMISTORHEATER == 1
 #define NUMTEMPS NUMTEMPS_1
 #define temptable temptable_1
@@ -417,9 +391,6 @@ short temptable_8[NUMTEMPS_8][2] = {
 #elif THERMISTORHEATER == 7
 #define NUMTEMPS NUMTEMPS_7
 #define temptable temptable_7
-#elif THERMISTORHEATER == 8
-#define NUMTEMPS NUMTEMPS_8
-#define temptable temptable_8
 #elif defined HEATER_USES_THERMISTOR
 #error No heater thermistor table specified
 #endif
@@ -444,9 +415,6 @@ short temptable_8[NUMTEMPS_8][2] = {
 #elif THERMISTORBED == 7
 #define BNUMTEMPS NUMTEMPS_7
 #define bedtemptable temptable_7
-#elif THERMISTORBED == 8
-#define BNUMTEMPS NUMTEMPS_8
-#define bedtemptable temptable_8
 #elif defined BED_USES_THERMISTOR
 #error No bed thermistor table specified
 #endif
