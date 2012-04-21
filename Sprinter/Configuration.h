@@ -202,7 +202,7 @@ const int dropsegments=5; //everything with less than this number of steps will 
 //-----------------------------------------------------------------------
 // This may be useful if you have multiple machines and wish to identify them by using the M115 command. 
 // By default we set it to zeros.
-#define _DEF_CHAR_UUID "00000000-1337-1337-1337-000000000000";
+#define _DEF_CHAR_UUID "00000000-1337-1337-1337-000000000000"
 
 
 //-----------------------------------------------------------------------
